@@ -1,0 +1,132 @@
+/* Responsive Portfolio — Homework 3 */
+
+/* Keep padding and borders inside each element's width. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #202b3c;
+  background: #f3f6fb;
+}
+
+.site-header {
+  padding: 56px 24px;
+  color: #ffffff;
+  text-align: center;
+  background: linear-gradient(135deg, #243b55, #426b91);
+}
+
+.header-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  line-height: 1.15;
+}
+
+.intro {
+  max-width: 620px;
+  margin: 16px auto 0;
+  font-size: 1.1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Desktop: three equal columns using CSS Grid. */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 32px 24px;
+}
+
+.card {
+  min-width: 0;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e1e8f0;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(28, 47, 73, 0.07);
+}
+
+.card-number {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #426b91;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  color: #243b55;
+  font-size: 1.35rem;
+}
+
+.card p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  padding: 18px 16px;
+  color: #ffffff;
+  text-align: center;
+  background: #243b55;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Tablet: switch to two columns at 768px and below. */
+@media screen and (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 24px 18px;
+  }
+
+  .site-header {
+    padding: 42px 20px;
+  }
+}
+
+/* Mobile: stack cards in one column at 480px and below. */
+@media screen and (max-width: 480px) {
+  .content-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 12px;
+  }
+
+  .site-header {
+    padding: 32px 16px;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
